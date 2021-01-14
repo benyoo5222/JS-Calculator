@@ -88,17 +88,14 @@ const calculate = (event) => {
                     internalState.operation = ENUMS[target.innerText];
                     internalState.ableToUseOperator = false;
                     displayNumber.innerText = 0;
-                    internalState
                 }
                 break;
             case "=":
-                internalState
                 const newtotal = calculateState(displayNumber.innerText);
                 internalState.total = 0;
                 internalState.ableToUseOperator = true;
                 internalState.operation = null;
                 displayNumber.innerText = newtotal;
-                internalState
         }
         
     }
