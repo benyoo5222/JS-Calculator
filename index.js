@@ -25,9 +25,17 @@ const clear = () => {
 
 const deleteLastCharacter = () => {
     const displayNumber = document.querySelector(".number");
-    displayNumber.innerText.length > 1
-        ? displayNumber.innerText = displayNumber.innerText.slice(0, displayNumber.innerText.length -1)
-        : displayNumber.innerText = 0;
+    Number(displayNumber.innerText) > 0
+        ? (
+            displayNumber.innerText.length > 1 
+                ? displayNumber.innerText = displayNumber.innerText.slice(0, displayNumber.innerText.length -1)
+                : displayNumber.innerText = 0
+        )
+        : (
+            displayNumber.innerText.length > 2
+                ? displayNumber.innerText = displayNumber.innerText.slice(0, displayNumber.innerText.length -1)
+                : displayNumber.innerText = 0
+        );
 };
 
 const calculateState = (currentTypedNumber) => {
