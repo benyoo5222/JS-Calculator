@@ -7,8 +7,10 @@
     --display-or-operation-font-color: white;
     --number-button-background-color: #d8d9db;
     --number-buttonc-background-on-hover: #ebebeb;
+    --number-button-active-background: #bbbcbe;
     --operation-button-background-color: #df974c;
     --operation-button-background-on-hover: #dfb07e;
+    --operation-button-active-background: #dd8d37;
 }
 
 .calc-container {
@@ -44,10 +46,19 @@
     border: solid 1px black;
     background-color: Var(--number-button-background-color, grey);
     font-weight: 400;
+    font-size: inherit;
 }
 
 .number-button:hover {
     background-color: Var(--number-buttonc-background-on-hover, lightgrey);
+}
+
+.number-button:active {
+    background-color: Var(--number-button-active-background);
+}
+
+.number-button:focus {
+    outline: -webkit-focus-ring-color auto 1px;
 }
 
 .operation {
@@ -58,10 +69,19 @@
     background-color: Var(--operation-button-background-color, orange);
     font-weight: 400;
     color: Var(--display-or-operation-font-color, white);
+    font-size: inherit;
 }
 
 .operation:hover {
     background-color: Var(--operation-button-background-on-hover, orange);
+}
+
+.operation:active {
+    background-color: Var(--operation-button-active-background);
+}
+
+.operation:focus {
+    outline: -webkit-focus-ring-color auto 1px;
 }
 
 .seventy-five-percent {
@@ -75,4 +95,3 @@
 .twenty-five-percent {
     flex-basis: 25%;
 }
-
