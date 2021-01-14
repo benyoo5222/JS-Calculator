@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --number-display-background-color: black;
+    --display-or-operation-font-color: white;
+    --number-button-background-color: #d8d9db;
+    --number-buttonc-background-on-hover: #ebebeb;
+    --operation-button-background-color: #df974c;
+    --operation-button-background-on-hover: #dfb07e;
+}
+
+.calc-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    height: 800px;
+    font-size: 40px;
+}
+
+.number-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: Var(--number-display-background-color, black);
+    padding: 0 1em;
+    flex-basis: 10%;
+}
+
+.number {
+    color: Var(--display-or-operation-font-color, white);
+}
+
+.num-pad-container {
+    display: flex;
+    flex-basis: 18%;
+}
+
+.number-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+    background-color: Var(--number-button-background-color, grey);
+    font-weight: 400;
+}
+
+.number-button:hover {
+    background-color: Var(--number-buttonc-background-on-hover, lightgrey);
+}
+
+.operation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+    background-color: Var(--operation-button-background-color, orange);
+    font-weight: 400;
+    color: Var(--display-or-operation-font-color, white);
+}
+
+.operation:hover {
+    background-color: Var(--operation-button-background-on-hover, orange);
+}
+
+.seventy-five-percent {
+    flex-basis: 75%;
+}
+
+.fifty-percent {
+    flex-basis: 50%;
+}
+
+.twenty-five-percent {
+    flex-basis: 25%;
+}
+
